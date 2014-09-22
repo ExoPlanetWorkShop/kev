@@ -13,6 +13,7 @@
     <meta content='' name='description'>
     <meta content='' name='author'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link rel="stylesheet" href="css/smoothslides.theme.css">
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
     <link href='css/page1.css' rel='stylesheet'>
@@ -23,6 +24,18 @@
     <div id='container'>
 
         <div class="wrapper">
+
+        <div class="ss-slides">
+            <div class="ss-slide">
+              <img src="images/bg1.jpg" />
+            </div>
+            <div class="ss-slide">
+              <img src="images/bg2.jpg" />
+            </div>
+            <div class="ss-slide">
+              <img src="images/bg3.jpg" />
+            </div>
+        </div>
 
 
             <!-- <header>header</header> -->
@@ -41,6 +54,8 @@
 
         <div class="descbar">
             <div class="innerWrapper">
+                <div class="l2">&laquo;</div>
+                <div class="r2">&raquo;</div>
                 <div class="title">
                     <!-- <p>創立於1980年，係全球世貿中心聯誼社組織之一員，
                         <br>會員人數超過一千人，萬商雲集，人文匯萃，是商務人士聚會商誼的上選。
@@ -89,7 +104,7 @@
                     <ul>
                         <li class="item1">
 
-                            <a href="" class="act">
+                            <a href="page1.html" class="act">
                                 <!-- <img src="images/menu1/menu1_1.png" alt="關於我們"> -->
                                 <!-- <img src="images/indicate.png" alt="">
                                 <div class="first"></div> -->
@@ -180,8 +195,51 @@
     </div>
 
     <script src='js/jquery-1.8.3.min.js'></script>
+    <!--<script src='js/jquery-1.6.2.min.js'></script>-->
+    <script type="text/javascript" src="js/smoothslides.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            function theArrow( arrow, LorR ){
+                arrow.css({
+                    "position": "absolute",
+                    "bottom": "24%",
+                    "font-size": "100px",
+                    "font-family": "inherit",
+                    "cursor": "pointer"
+                }).hover(function(){
+                    $(this).css("color",'rgba(237, 225, 197, 1)')
+                },function(){
+                    $(this).css("color",'rgba(237, 225, 197, 0.502)');
+                });
+
+                if ( LorR === 'right' ){
+                    arrow.css('right','0px');
+                }else if( LorR === 'left' ){
+                    arrow.css('left','0px');
+                }
+            }
+            theArrow( $('.l2'), 'left' );
+            theArrow( $('.r2'), 'right' );
+            $('.logo').css("cursor", "pointer").on('click',function(){
+                window.location.href = 'index.html';
+            })
+        })
+      /* wait for images to load */
+      $(window).load( function() {
+        $(document).smoothSlides({
+        duration: 12000,
+        navigation: false,
+        pagination: false,
+        order: 'random',
+        effect: 'random',
+        // 'random', 'zoomIn', 'zoomOut', 'panLeft', 'panRight', 'panUp', 'panDown', 'crossFade','none'
+        /* options seperated by commas */
+        });
+      });
+    </script>
     <script src='js/plugins.js'></script>
     <script src='js/script.js'></script>
+    
     <!--[if lt IE 7]>
     <script src='//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js'></script>
     <script>
