@@ -16,7 +16,28 @@
     <link rel="stylesheet" href="css/smoothslides.theme.css">
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
+<!--
     <script src='js/modernizr-2.0.6.min.js'></script>
+-->
+    <script src='js/jquery-1.6.2.min.js'></script>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+         $(function(){
+          //~ $('#button_test').click(function(){
+              console.log("test");
+            //$("#test1").show(500);
+            $("#test").fadeIn(5000);
+            $("#test1").fadeIn(5000);
+            $("#test2").animate({ 
+              width: "35%",
+              //~ opacity: 0.9,
+              marginLeft: "0.6in",
+              fontSize: "4em", 
+            }, 1500);
+          //~ });
+        });
+    
+    </script>
 </head>
 
 <body>
@@ -52,11 +73,18 @@
 
         <div class="descbar">
             <div class="innerWrapper">
-                <div class="title">
-                    <!-- <p>歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。</p>
-                    <h1>Welcome</h1> -->
+                <div class="title" id="test" style="display: none;">
+                    <p id="test1" style="display:none;width:150%">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
+                    <span id="test2">Welcome</span>
+                    </p>
+                     
+<!--
                     <img src="images/welcome.png" alt="">
+-->
                 </div>
+<!--
+                <button id="button_test">test</button>
+-->
             </div>
 
         </div>
