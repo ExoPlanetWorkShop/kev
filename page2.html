@@ -16,12 +16,31 @@
     <link href='css/pageInit.css' rel='stylesheet'>
     <link href='css/main.css' rel='stylesheet'>
     <link href='css/page2.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/smoothslides.theme.css">
 <!--
     <script src='js/modernizr-2.0.6.min.js'></script>
 -->
     <script src='js/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src="js/smoothslides.min.js"></script>
     <script>
         $(function(){
+
+            $(window).load( function() {
+                $(document).smoothSlides({
+                duration: 18000,
+                navigation: false,
+                pagination: false,
+                order: 'random',
+                effect: 'random',
+                // 'random', 'zoomIn', 'zoomOut', 'panLeft', 'panRight', 'panUp', 'panDown', 'crossFade','none'
+                /* options seperated by commas */
+                });
+            });
+
+            $('.logo').css("cursor", "pointer").on('click',function(){
+                window.location.href = 'index.html';
+            });
+
             $("#summary").click(function(){
                 $('#aboutus_manage').hide();
                 $("#aboutus_locate").hide();
@@ -67,6 +86,7 @@
                 
 
             });
+            $("#summary").click();
         });
 
     </script>
@@ -77,6 +97,17 @@
 
         <div class="wrapper">
 
+            <div class="ss-slides">
+                <div class="ss-slide">
+                  <img src="images/bg1.jpg" />
+                </div>
+                <div class="ss-slide">
+                  <img src="images/bg2.jpg" />
+                </div>
+                <div class="ss-slide">
+                  <img src="images/bg3.jpg" />
+                </div>
+            </div>
 
             <!-- <header>header</header> -->
             <div id='main' role='main'>
@@ -346,7 +377,6 @@
 
     </div>
 
-    <script src='js/jquery-1.6.2.min.js'></script>
     <script src='js/plugins.js'></script>
     <script src='js/script.js'></script>
     <!--[if lt IE 7]>
