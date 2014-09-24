@@ -28,29 +28,25 @@
 -->
     <script>
          $(function(){
-          //~ $('#button_test').click(function(){
             //$("#test1").show(500);
             //~ $("#test").fadeIn(8000);
            
             //~ $("#test2").fadeIn(7000);
             $('footer').slideDown(2000);
             $('#menubar').slideDown(2000);
-            $("#test2").animate({//以圖片作移動
-                //~ width: "",
-                marginRight: "30px",
-                fontSize: "3.5em", 
-                }, 2000,"swing",function(){
-                 $("#test1").fadeIn(3000);
+            //~ $("#test2").animate({//以文字作移動
+                //width: "",
+                //~ marginRight: "30px",
+                //~ fontSize: "3.5em", 
+                //~ }, 2000,"swing",function(){
+                 //~ $("#test1").fadeIn(3000);
+            //~ });
+            $("#test_png").animate({//以圖片作移動
+              marginRight: "30px",
+              opacity:'0.9',
+            }, 1200,"swing",function(){
+                 $("#test1").fadeIn(2000);
             });
-            //~ $("#test_png").animate({//以圖片作移動
-              //~ width: "30%",
-              //~ 
-              //~ //opacity: 0.9, //透明度
-              //~ marginLeft: "0.6in",
-              //~ fontSize: "4em", 
-            //~ }, 5500);
-            
-          //~ });
         });
     
     </script>
@@ -79,14 +75,16 @@
         <div class="descbar">
             <div class="innerWrapper">
                 <div class="title" id="test" style=>
+<!--
                     <p id="test1" style="display:none;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
+-->
                     
                     </p>
-                    <p id="test2" style="margin-right:100px;display:inline;font-size:3.5em;">Welcome</p>
-                     
 <!--
-                    <img src="images/welcome.png" id="test_png" style="width: 80%;" alt="">
+                    <p id="test2" style="margin-right:100px;display:inline;font-size:3.5em;">Welcome</p>
 -->
+                    <img src="images/welcome_2.png" id="test1" style="display:none;" alt=""> 
+                    <img src="images/welcome_1.png" id="test_png" style="opacity:0.1;margin-right:80px;margin-bottom:10px;" alt="">
                 </div>
 <!--
                 <button id="button_test">test</button>
