@@ -31,15 +31,22 @@
           //~ $('#button_test').click(function(){
             //$("#test1").show(500);
             //~ $("#test").fadeIn(8000);
-            $("#test1").fadeIn(7000);
-            $("#test2").fadeIn(7000);
+           
+            //~ $("#test2").fadeIn(7000);
             $('footer').slideDown(2000);
             $('#menubar').slideDown(2000);
-            
-            //~ $("#test2").animate({
-              //~ width: "35%",
+            $("#test2").animate({//以圖片作移動
+                //~ width: "",
+                marginRight: "30px",
+                fontSize: "3.5em", 
+                }, 2000,"swing",function(){
+                 $("#test1").fadeIn(3000);
+            });
+            //~ $("#test_png").animate({//以圖片作移動
+              //~ width: "30%",
+              //~ 
               //~ //opacity: 0.9, //透明度
-              //~ marginLeft: "0.5in",
+              //~ marginLeft: "0.6in",
               //~ fontSize: "4em", 
             //~ }, 5500);
             
@@ -71,13 +78,14 @@
 
         <div class="descbar">
             <div class="innerWrapper">
-                <div class="title" id="test" style="">
-                    <p id="test1" style="display:none;width:190%;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
-                    <span id="test2"style="display:none;font-size:4em;">Welcome</span>
+                <div class="title" id="test" style=>
+                    <p id="test1" style="display:none;">歡迎您來到位於142公尺最具高度，最有視野的頂級商務會館。
+                    
                     </p>
+                    <p id="test2" style="margin-right:100px;display:inline;font-size:3.5em;">Welcome</p>
                      
 <!--
-                    <img src="images/welcome.png" alt="">
+                    <img src="images/welcome.png" id="test_png" style="width: 80%;" alt="">
 -->
                 </div>
 <!--
