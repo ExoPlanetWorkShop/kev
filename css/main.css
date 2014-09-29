@@ -227,7 +227,11 @@ body a:hover img {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
+body.noindex{
+/*
+    background:none;
+*/
+}
 #container {
   position: relative;
   width: 100%;
