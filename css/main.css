@@ -230,6 +230,9 @@ body a:hover img {
 body.noindex{
     background:none;
 }
+.page1_html{
+    background:none;
+}
 #container {
   position: relative;
   width: 100%;
