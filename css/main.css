@@ -228,9 +228,7 @@ body a:hover img {
   transition: all 0.2s ease-in-out;
 }
 body.noindex{
-/*
     background:none;
-*/
 }
 #container {
   position: relative;
@@ -339,7 +337,9 @@ body.noindex{
 #logo_action{
   display: none;
 }
-
+#page1ID{
+    display: none;
+}
 
 
 /*# sourceMappingURL=main.css.map */
